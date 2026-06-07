@@ -234,3 +234,4 @@ with gr.Blocks(title="PromptForge") as demo:
     clear_btn.click(fn=lambda: [], outputs=chatbot)
 
 demo.launch()
+
