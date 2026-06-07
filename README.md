@@ -9,3 +9,4 @@
 - ✅ GitHub account created, public repo pushed.
 - ✅ Google Colab loads and runs code.
 - ✅ Groq API key obtained and first call works.
+
