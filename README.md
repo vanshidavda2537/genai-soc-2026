@@ -69,15 +69,6 @@ Analyzes code and returns structured JSON feedback.
 
 Generates imaginative and descriptive content.
 
-### 🔹 Additional Functionality
-
-* Persona Switching
-* System Prompt Engineering
-* Few-Shot Prompting
-* Streaming Responses
-* Structured JSON Outputs
-* Interactive Gradio Interface
-
 ---
 
 ## 🛠 Technologies Used
@@ -88,45 +79,6 @@ Generates imaginative and descriptive content.
 * Gradio
 * dotenv
 * JSON
-
----
-
-## 📂 Project Structure
-
-```text
-week1-promptforge/
-│
-├── app.py
-├── requirements.txt
-├── .env.example
-├── screenshots/
-└── README.md
-```
-
----
-
-## 📸 Project Screenshots
-
-Screenshots demonstrating all personas are available inside:
-
-```text
-week1-promptforge/screenshots/
-```
-
----
-
-## 📚 Concepts Learned
-
-During Week 1, I gained hands-on experience with:
-
-* Prompt Engineering
-* System Prompts
-* Few-Shot Learning
-* Persona-Based AI Design
-* Structured Output Formatting
-* API Integration
-* Environment Variables
-* Interactive Web Interfaces with Gradio
 
 ---
 
