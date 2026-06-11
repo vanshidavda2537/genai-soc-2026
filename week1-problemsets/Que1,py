@@ -1,0 +1,15 @@
+def unique_elements(arr):
+    unique = []
+
+    for num in arr:
+        if num not in unique:
+            unique.append(num)
+
+    return unique
+
+
+arr = list(map(int, input("Enter numbers separated by spaces: ").split()))
+
+result = unique_elements(arr)
+
+print("Unique Elements:", result)
