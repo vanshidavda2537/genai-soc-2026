@@ -63,8 +63,6 @@ The Gradio application will launch locally in the browser.
 
 # Screenshot of Gradio App
 
-Insert screenshot here:
-
 ![Gradio App](screenshot.png)
 
 ---
@@ -105,7 +103,7 @@ The model correctly avoided hallucination and followed the grounding instruction
 
 ---
 
-# Chunking and Embeddings (In My Own Words)
+# Chunking and Embeddings 
 
 Chunking is the process of breaking a large document into smaller pieces so that the language model can process and search the information efficiently. Instead of searching an entire PDF, the system searches through smaller chunks of text.
 
