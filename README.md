@@ -82,106 +82,189 @@ Generates imaginative and descriptive content.
 
 ---
 
-Week 2 – DocBuddy Pro
-Description
+# 📚 Week 2 – DocBuddy Pro (RAG-based Multi-PDF Q&A)
 
-DocBuddy Pro is a Retrieval-Augmented Generation (RAG) application that allows users to upload PDFs and ask questions about their contents.
+## Overview
 
-The system retrieves relevant chunks from uploaded documents and uses an LLM to generate answers.
+DocBuddy Pro is a Retrieval-Augmented Generation (RAG) application that enables users to upload multiple PDF documents and ask questions based on their contents.
 
-Features
-Multi-PDF Upload
-PDF Parsing
-Chunking
-Embeddings
-Chroma Vector Database
-Retrieval-Augmented Generation (RAG)
-Gradio Interface
-Tech Stack
-Python
-LangChain
-HuggingFace Embeddings
-ChromaDB
-Groq
-Gradio
-Architecture
-PDFs
-  │
-  ▼
+Instead of relying solely on the LLM's training knowledge, the system retrieves relevant information from uploaded documents and uses it to generate accurate answers.
+
+---
+
+## Features
+
+* 📄 Multi-PDF Upload Support
+* ✂️ Document Chunking
+* 🔎 Semantic Search
+* 🧠 Embedding-based Retrieval
+* 📚 Chroma Vector Database
+* 🤖 Groq LLM Integration
+* 🌐 Gradio Interface
+
+---
+
+## Tech Stack
+
+* Python
+* LangChain
+* HuggingFace Embeddings
+* ChromaDB
+* Groq
+* Gradio
+* PyPDF
+* dotenv
+
+---
+
+## Architecture
+
+```text
+PDF Documents
+      │
+      ▼
 Text Extraction
-  │
-  ▼
+      │
+      ▼
 Chunking
-  │
-  ▼
+      │
+      ▼
 Embeddings
-  │
-  ▼
-ChromaDB
-  │
-  ▼
+      │
+      ▼
+Chroma Vector Store
+      │
+      ▼
 Retriever
-  │
-  ▼
-LLM
-  │
-  ▼
+      │
+      ▼
+Groq LLM
+      │
+      ▼
 Answer
+```
 
-Week 3 – AgentX
-Description
+---
 
-AgentX is an AI Research Assistant built using LangGraph and LangChain.
+## Key Concepts Learned
 
-The agent can use tools, maintain memory, and display reasoning traces.
+* Retrieval-Augmented Generation (RAG)
+* Embeddings
+* Vector Databases
+* Semantic Search
+* Document Chunking
+* LangChain Pipelines
 
-Features
-DuckDuckGo Search Tool
-Current Date Tool
-Conversation Memory
-Reasoning Trace
-Gradio Chat Interface
-Tech Stack
-Python
-LangChain
-LangGraph
-Groq
-Gradio
-Architecture
-User
- │
- ▼
+---
+
+# 🤖 Week 3 – AgentX (AI Agent with Tools & Memory)
+
+## Overview
+
+AgentX is an AI Research Assistant built using LangGraph and LangChain. Unlike a traditional chatbot, AgentX can reason, use tools, maintain memory, and display a reasoning trace showing how answers were generated.
+
+The agent uses external tools such as web search and date retrieval to provide more accurate responses.
+
+---
+
+## Features
+
+* 🔍 DuckDuckGo Search Tool
+* 📅 Current Date Tool
+* 🧠 Conversation Memory
+* 📜 Reasoning Trace
+* 🤖 ReAct Agent Architecture
+* 🌐 Gradio Chat Interface
+
+---
+
+## Tech Stack
+
+* Python
+* LangChain
+* LangGraph
+* Groq
+* DuckDuckGo Search
+* Gradio
+* dotenv
+
+---
+
+## Architecture
+
+```text
+User Query
+     │
+     ▼
 AgentX
- │
- ├── Search Tool
- ├── Date Tool
- ├── Memory
- │
- ▼
-Answer + Reasoning Trace
+     │
+     ├── DuckDuckGo Search
+     ├── Current Date Tool
+     ├── Memory
+     │
+     ▼
+Reasoning
+     │
+     ▼
+Final Answer
+```
 
-Skills Learned
+---
 
-Throughout the GenAI Track, I gained hands-on experience with:
+## Tools Used
 
-Prompt Engineering
-LLM Integration
-Retrieval-Augmented Generation (RAG)
-Embeddings and Vector Databases
-LangChain
-LangGraph
-AI Agents
-Tool Calling
-Memory Systems
-Gradio Application Development
-Git & GitHub
+### DuckDuckGo Search
 
+Used for:
 
-Author
+* Current events
+* Recent news
+* Real-time information
+* General factual queries
 
-Vanshi Davda
+### Current Date Tool
 
-MSTC GenAI Track – GenAI SOC
+Used for:
+
+* Date-based questions
+* Time-sensitive reasoning
+
+---
+
+## Reasoning Trace
+
+AgentX displays the reasoning process by showing:
+
+* Tool selected
+* Tool input
+* Order of execution
+
+Example:
+
+```text
+Step 1
+Tool : duckduckgo_search
+Input : latest ISRO mission
+
+Step 2
+Tool : get_current_date
+Input : {}
+```
+
+---
+
+## Key Concepts Learned
+
+* AI Agents
+* Tool Calling
+* LangGraph
+* Memory Systems
+* ReAct Architecture
+* Multi-step Reasoning
+* Agent Workflows
+
+---
+
 
 ## ⭐ Repository Purpose
 
