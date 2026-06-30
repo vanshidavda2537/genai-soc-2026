@@ -3,19 +3,39 @@ from langchain_groq import ChatGroq
 from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_community.tools import WikipediaQueryRun
 from langchain_community.utilities import WikipediaAPIWrapper
+from langchain_core.tools import tool
 from tools_rag import search_documents
 from tools_vision import describe_image
 
 llm = ChatGroq(
-    model="llama-3.3-70b-versatile",
+    model="openai/gpt-oss-120b",  # llama-3.3-70b-versatile was deprecated by Groq on 2026-06-17
     temperature=0
 )
 
 duckduckgo = DuckDuckGoSearchRun()
 
-wikipedia = WikipediaQueryRun(
-    api_wrapper=WikipediaAPIWrapper()
-)
+_wiki_api = WikipediaAPIWrapper()
+_wiki_query_run = WikipediaQueryRun(api_wrapper=_wiki_api)
+
+
+@tool
+def wikipedia(query: str) -> str:
+    """Searches Wikipedia for encyclopedic/background information. Falls back
+    to a DuckDuckGo search scoped to wikipedia.org if Wikipedia's own API is
+    unreachable or blocked (a known issue on some ISPs)."""
+    try:
+        result = _wiki_query_run.run(query)
+        if result and result.strip():
+            return result
+    except Exception:
+        pass
+
+    try:
+        fallback = DuckDuckGoSearchRun().run(f"{query} site:wikipedia.org")
+        return fallback or "No information found for that query."
+    except Exception as e:
+        return f"Wikipedia lookup failed and the fallback also failed: {e}"
+
 
 tools = [
     duckduckgo,

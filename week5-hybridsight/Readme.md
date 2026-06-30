@@ -24,7 +24,6 @@ week5-hybridsight/
 ├── tools_rag.py          # PDF Search Tool
 ├── tools_vision.py       # Vision Tool
 ├── requirements.txt
-├── .env
 ├── .env.example
 ├── chroma_store/         # Chroma Vector Database
 └── README.md
@@ -112,15 +111,9 @@ The LangGraph ReAct Agent automatically decides which tool to use.
 
 Ask a question answerable only from an uploaded PDF.
 
-Expected Tool:
+Expected Tool: `search_documents`
 
-```
-search_documents
-```
-
-```
-screenshots/pdf_question.png
-```
+![PDF Question](screenshots/pdf_question.png)
 
 ---
 
@@ -128,15 +121,9 @@ screenshots/pdf_question.png
 
 Ask about a current event.
 
-Expected Tool:
+Expected Tool: `DuckDuckGo`
 
-```
-DuckDuckGo
-```
-
-```
-screenshots/web_search.png
-```
+![Web Search](screenshots/web_search.png)
 
 ---
 
@@ -148,15 +135,9 @@ Upload an image and ask:
 What's in this image?
 ```
 
-Expected Tool:
+Expected Tool: `describe_image`
 
-```
-describe_image
-```
-
-```
-screenshots/vision.png
-```
+![Vision](screenshots/vision.png)
 
 ---
 
@@ -164,15 +145,9 @@ screenshots/vision.png
 
 Ask a historical or factual question.
 
-Expected Tool:
+Expected Tool: `Wikipedia`
 
-```
-Wikipedia
-```
-
-```
-screenshots/wiki.png
-```
+![Wikipedia](screenshots/wiki.png)
 
 ---
 
@@ -180,24 +155,11 @@ screenshots/wiki.png
 
 Ask a PDF question before uploading any PDF.
 
-Expected Output
+Expected Output: Graceful "No Documents Found" message
 
-```
-Graceful "No Documents Found" message
-```
-
-```
-screenshots/output.png
-```
+![Empty Knowledge Base](screenshots/output.png)
 
 ---
-
-
-
-
-### DuckDuckGo Search
-
-
 
 ## 📚 Learning Outcomes
 

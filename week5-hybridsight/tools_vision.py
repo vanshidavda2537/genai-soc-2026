@@ -37,7 +37,8 @@ def describe_image(image_path: str) -> str:
 
         response = client.chat.completions.create(
 
-            model="llama-3.2-11b-vision-preview",
+            model="qwen/qwen3.6-27b",  # llama-3.2-11b-vision-preview was deprecated
+            reasoning_effort="none",   # qwen3.6 "thinks" by default; this keeps <think> tags out
 
             messages=[
                 {
