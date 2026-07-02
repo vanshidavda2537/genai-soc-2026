@@ -1,0 +1,16 @@
+# Secrets — never commit real API keys
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Vector store data (regenerated on each fresh launch anyway)
+chroma_store/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
