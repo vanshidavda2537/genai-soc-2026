@@ -13,7 +13,7 @@ pinned: false
 
 *A hybrid LangGraph agent — RAG over your own documents, live web search, Wikipedia, and vision — wrapped in a polished multi-tab UI and deployed live on Hugging Face Spaces.*
 
-**🔗 Live demo:** [huggingface.co/spaces/dhanyamankad/hybridsight](https://huggingface.co/spaces/dhanyamankad/hybridsight)
+**🔗 Live demo:** [huggingface.co/spaces/vanshi25/hybridsight](https://huggingface.co/spaces/vanshi25/hybridsight)
 
 ![HybridSight screenshot](screenshots/test1_empty_input.png)
 
